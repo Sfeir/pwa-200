@@ -11,6 +11,10 @@
     {
       "name": "Florian Orpelière",
       "email": "florian.orpeliere@gmail.com"
+    },
+    {
+      "name": "Wassim Chegham",
+      "email": "github@wassimchegham.com"
     }
   ],
   "repository": {
@@ -21,32 +25,33 @@
     "PWA, service worker, angular, materials"
   ],
   "scripts": {
-    "start": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "bugs": {
     "url": "https://github.com/Sfeir/peoples/issues"
   },
   "homepage": "https://github.com/Sfeir/peoples#readme",
   "dependencies": {
-    "angular": "^1.5.2",
-    "angular-animate": "^1.5.3",
-    "angular-material": "^1.0.1",
-    "angular-route": "^1.5.2",
-    "bootstrap": "^3.3.6",
-    "gulp-eslint": "^2.0.0"
+    "angular": "1.5.2",
+    "angular-animate": "1.5.3",
+    "angular-aria": "1.5.6",
+    "angular-material": "1.0.1",
+    "angular-messages": "1.5.6",
+    "angular-route": "1.5.2",
+    "bootstrap": "3.3.6",
+    "gulp-eslint": "2.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.11.2",
-    "del": "^2.2.0",
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-connect": "^2.3.1",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-replace": "^0.5.4",
-    "gulp-rev": "^7.0.0",
-    "gulp-usemin": "^0.3.21",
-    "merge-stream": "^1.0.0",
-    "yargs": "^4.4.0"
+    "browser-sync": "2.11.2",
+    "del": "2.2.0",
+    "gulp": "3.9.0",
+    "gulp-concat": "2.6.0",
+    "gulp-connect": "2.3.1",
+    "gulp-gh-pages": "0.5.4",
+    "gulp-replace": "0.5.4",
+    "gulp-rev": "7.0.0",
+    "gulp-usemin": "0.3.21",
+    "merge-stream": "1.0.0",
+    "yargs": "4.4.0"
   }
 }
