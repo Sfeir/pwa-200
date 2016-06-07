@@ -162,12 +162,12 @@ self.addEventListener('fetch', function (event) {
 });
 
 self.addEventListener('push', function(event) {
+  console.log('here');
   event.waitUntil(
-    function() {
       self.registration.showNotification('Coucou !', {
         body: 'Je suis un chat !',
         icon: 'img/cat.jpg',
         tag: 'tag'
-      });
-    });
+      })
+  );
 });

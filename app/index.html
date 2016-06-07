@@ -49,9 +49,7 @@
 
         reg.pushManager.getSubscription()
           .then(function(pushSubscription) {
-            console.log(pushSubscription);
-            if(pushSubscription){
-
+            if(!pushSubscription){
               navigator.serviceWorker.getRegistration().then(function (reg) {
                 reg.pushManager.subscribe({userVisibleOnly: true})
                   .then(function (sub) {
