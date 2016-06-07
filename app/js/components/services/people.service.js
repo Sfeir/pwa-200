@@ -3,11 +3,11 @@
 
     angular
         .module('people-components')
-        .factory('People', ['$http', 'CacheService', Peoples]);
+        .factory('People', ['$http', Peoples]);
 
-    function Peoples($http, CacheService) {
+    function Peoples($http) {
         const API_URL = 'mocks/people.json';
-        var cachePromise, networkPromise;
+        var networkPromise;
         var peoples;
         var peopleMap = new Map();
 
@@ -22,15 +22,6 @@
         initialize();
 
         function initialize() {
-            if (CacheService.isCacheActive()) {
-                cachePromise = CacheService.getCacheData(API_URL)
-                    .then(function(response) {
-                        if (hasRequestPending && response) {
-                            peoples = response;
-                            return peoples;
-                        }
-                    });
-            }
             hasRequestPending = true;
             networkPromise    = $http.get(API_URL)
                 .then(function(response) {
@@ -55,16 +46,6 @@
         }
 
         function getPeoples() {
-            if (cachePromise) {
-                return cachePromise
-                    .then(function() {
-                        if (!peoples) {
-                            return networkPromise;
-                        }
-                        return peoples;
-                    })
-                    .then(onResult);
-            }
             return networkPromise.then(onResult);
         }
 
