@@ -4,7 +4,6 @@
     angular.module('peopleApp', [
         'ngRoute',
         'ngAnimate',
-        'ngMessages',
         'ngMaterial',
         'people-home',
         'people-components',
