@@ -15,8 +15,8 @@ var browserSync = require('browser-sync').create();
 
 
 gulp.task('copy', ['clean'], function build() {
-    var fonts = gulp.src('node_modules/bootstrap/dist/fonts/*')
-      .pipe(gulp.dest('build/fonts/'));
+    var fonts = gulp.src(['app/css/font/*'])
+      .pipe(gulp.dest('build/css/font/'));
 
     var imgs = gulp.src('app/img/**/*')
       .pipe(gulp.dest('build/img/'));
@@ -27,12 +27,15 @@ gulp.task('copy', ['clean'], function build() {
     var templates = gulp.src('app/js/**/*.html')
       .pipe(gulp.dest('build/templates/'));
 
+    var offline = gulp.src('app/offline.html')
+      .pipe(gulp.dest('build/'));
+
     if (argv.step) {
         gulp.src(argv.step + '/**/*')
           .pipe(gulp.dest('build/'));
     }
 
-    return merge(fonts, imgs, mocks, templates);
+    return merge(fonts, imgs, mocks, templates, offline);
 });
 
 gulp.task('eslint', function() {
