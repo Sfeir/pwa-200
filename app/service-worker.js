@@ -2,14 +2,14 @@ console.log('Service worker ok =D');
 
 self.addEventListener('install', function (event) {
   console.log('event install');
-
-  // your code here
-
+  event.waitUntil(
+    self.skipWaiting();
+  );
 });
 
 self.addEventListener('activate', function (event) {
   console.log('event activate');
-
-  // your code here
-  
+  event.waitUntil(
+    self.clients.claim();
+  );
 });
