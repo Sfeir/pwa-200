@@ -118,7 +118,8 @@ var cacheAppShellStatic = [
   "/",
   "offline.html",
   "mocks/notification.json",
-  "mocks/people.json"
+  "mocks/people.json",
+  "manifest/manifest.json"
 ];
 
 self.addEventListener('install', function (event) {
@@ -154,6 +155,7 @@ self.addEventListener('fetch', function (event) {
 
     if (url.pathname.endsWith('jpg')) {
       event.respondWith(fetch(catImage));
+      return false;
     }
 
     event.respondWith(
