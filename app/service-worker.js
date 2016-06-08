@@ -135,9 +135,9 @@ self.addEventListener('install', function (event) {
 self.addEventListener('activate', function (event) {
   console.log('event activate');
   event.waitUntil(
-
-    // exercice 5-5: update this section and add your code here
-    self.clients.claim()
+    self.clients.claim().then(function() {
+      caches.delete('cache-dynamic')
+    })
   );
 });
 
