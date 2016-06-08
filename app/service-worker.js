@@ -113,11 +113,11 @@ var cacheAppShellStatic = [
   "img/randomuser/99.jpg",
   "img/search.svg",
   "index.html",
+  "/",
   "offline.html",
   "manifest/manifest.json",
   "mocks/notification.json",
-  "mocks/people.json",
-  "service-worker.js"
+  "mocks/people.json"
 ];
 
 console.log('Service worker ok =D');
