@@ -3,14 +3,14 @@ console.log('Service worker ok =D');
 self.addEventListener('install', function (event) {
   console.log('event install');
   event.waitUntil(
-    self.skipWaiting();
+    self.skipWaiting()
   );
 });
 
 self.addEventListener('activate', function (event) {
   console.log('event activate');
   event.waitUntil(
-    self.clients.claim();
+    self.clients.claim()
   );
 });
 
@@ -22,7 +22,8 @@ self.addEventListener('fetch', function (event) {
       || url.origin.startsWith('chrome-extension')){
     return false;
   }
-
-  // your code here
+  else if (url.pathname.endsWith('jpg')) {
+    event.respondWith(fetch(catImage));
+  }
 
 });
