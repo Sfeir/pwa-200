@@ -173,3 +173,9 @@ self.addEventListener('fetch', function (event) {
   }
 
 });
+
+self.addEventListener('push', function(event) {
+
+  // exercice 8-1: add your code here
+
+});
