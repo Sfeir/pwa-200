@@ -148,10 +148,12 @@ self.addEventListener('fetch', function (event) {
       || url.origin.startsWith('chrome-extension')){
     return false;
   }
-  else if (url.pathname.endsWith('jpg')) {
-    event.respondWith(fetch(catImage));
-  }
   else {
+
+    if (url.pathname.endsWith('jpg')) {
+      event.respondWith(fetch(catImage));
+    }
+
     event.respondWith(
       caches.match(event.request).then(function (response) {
         return response || fetch(event.request).then(function(responseFetch) {
