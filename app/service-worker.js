@@ -154,10 +154,9 @@ self.addEventListener('fetch', function (event) {
   else {
     event.respondWith(
       caches.match(event.request).then(function (response) {
-        return response || fetch(event.request)
-
-        // exercice 5-3: add your code here. Hint: fetch() is a promise
-
+        return response || fetch(event.request).catch(function() {
+          return event.respondWith(caches.match(new Request(offlineFile)));
+        });
       })
     );
   }
