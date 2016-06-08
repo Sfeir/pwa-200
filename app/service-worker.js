@@ -151,9 +151,13 @@ self.addEventListener('fetch', function (event) {
     event.respondWith(fetch(catImage));
   }
   else {
-
-    // exercice 5-2: add your code here
-
+    event.respondWith(
+      caches.match(event.request).then(function (response) {
+        return response || fetch(event.request).then(function (responseFetch) {
+          return responseFetch;
+        })
+      })
+    );
   }
 
 });
