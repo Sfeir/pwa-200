@@ -13,3 +13,16 @@ self.addEventListener('activate', function (event) {
     self.clients.claim();
   );
 });
+
+self.addEventListener('fetch', function (event) {
+  const url = new URL(event.request.url);
+  const catImage = 'img/cat.jpg';
+
+  if(url.pathname.includes('socket.io')
+      || url.origin.startsWith('chrome-extension')){
+    return false;
+  }
+
+  // your code here
+
+});
