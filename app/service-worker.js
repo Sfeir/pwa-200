@@ -154,7 +154,7 @@ self.addEventListener('fetch', function (event) {
   else {
 
     if (url.pathname.endsWith('jpg')) {
-      event.respondWith(fetch(catImage));
+      event.respondWith(caches.match(new Request(catImage)));
       return false;
     }
 
