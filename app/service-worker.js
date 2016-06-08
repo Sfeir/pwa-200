@@ -1,3 +1,5 @@
+console.log('Service worker ok =D');
+
 var cacheAppShellStatic = [
   "css/font/bold.eot",
   "css/font/bold.ttf",
@@ -120,8 +122,6 @@ var cacheAppShellStatic = [
   "service-worker.js"
 ];
 
-console.log('Service worker ok =D');
-
 self.addEventListener('install', function (event) {
   console.log('event install');
   event.waitUntil(
@@ -135,27 +135,34 @@ self.addEventListener('install', function (event) {
 
 self.addEventListener('activate', function (event) {
   console.log('event activate');
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    self.clients.claim().then(function() {
+      caches.delete('cache-dynamic')
+    })
+  );
 });
 
 self.addEventListener('fetch', function (event) {
   const url = new URL(event.request.url);
+
   if (url.pathname.endsWith('jpg')) {
     event.respondWith(caches.match(new Request('img/cat.jpg')));
   }
   else {
-    if(url.pathname.includes('socket.io')){
+    if(url.pathname.includes('socket.io')
+        || url.origin.startsWith('chrome-extension')){
       return false;
     }
     event.respondWith(
       caches.match(event.request).then(function (response) {
-        //console.log(event.request.url, !!response);
         return response || fetch(event.request).then(function (responseFetch) {
-            return caches.open('dynamic-cache').then(function (cache) {
+            return caches.open('cache-dynamic').then(function (cache) {
               cache.put(event.request, responseFetch.clone());
               return responseFetch;
             })
-          });
+          }).catch(function() {
+            return event.respondWith(caches.match(new Request('offline.html')));
+          })
       })
     );
   }
