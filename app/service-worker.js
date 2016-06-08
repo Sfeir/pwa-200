@@ -155,10 +155,10 @@ self.addEventListener('fetch', function (event) {
     event.respondWith(
       caches.match(event.request).then(function (response) {
         return response || fetch(event.request).then(function(responseFetch) {
-
-          // exercice 5-4: add your code here
-
-          return responseFetch;
+          return caches.open('cache-dynamic').then(function (cache) {
+            cache.put(event.request, responseFetch.clone());
+            return responseFetch;
+          });
         }).catch(function() {
           return event.respondWith(caches.match(new Request(offlineFile)));
         });
