@@ -37,6 +37,12 @@
     </md-toolbar>
   </header>
 
+  <section id="shellToolbar" class="extend-toolbar">
+    <button class="md-fab md-primary md-install md-button md-ink-ripple" type="button" id="installButton" aria-label="Install app">
+      <md-icon md-svg-src="img/md-install.svg"></md-icon>
+    </button>
+  </section>
+
   <main class="view-container">
     <div ng-view autoscroll="true" class="view-frame view-animate"></div>
   </main>
@@ -48,6 +54,34 @@
       console.log('Service worker installed');
     });
   }
+  const installButton = document.getElementById('installButton');
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    deferredEvent = e;
+    //Show button
+    installButton.classList.add('show');
+  });
+  var deferredEvent;
+  installButton.addEventListener('click', function onInstall() {
+    if (deferredEvent !== undefined) {
+      // The user has had a postive interaction with our app and Chrome
+      // has tried to prompt previously, so let's show the prompt.
+      deferredEvent.prompt();
+      // Follow what the user has done with the prompt.
+      deferredEvent.userChoice.then(function (choiceResult) {
+        console.log(choiceResult.outcome);
+        if (choiceResult.outcome == 'dismissed') {
+          console.log('User cancelled home screen install');
+        }
+        else {
+          console.log('User added to home screen');
+        }
+        installButton.classList.remove('show');
+        // We no longer need the prompt.  Clear it up.
+        deferredEvent = null;
+      });
+    }
+  });
   </script>
 
   <!-- build:js(node_modules) js/vendor.js-->
