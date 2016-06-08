@@ -118,7 +118,8 @@ var cacheAppShellStatic = [
   "/",
   "offline.html",
   "mocks/notification.json",
-  "mocks/people.json"
+  "mocks/people.json",
+  "manifest/manifest.json"
 ];
 
 self.addEventListener('install', function (event) {
