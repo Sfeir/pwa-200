@@ -17,3 +17,9 @@ You can view the slides [here](https://docs.google.com/presentation/d/103fPXGcTS
     gulp
     # Run with service worker
     gulp sw-ready
+
+# Branches
+
+Each exercice has two branches:
+- a clean branch to get you started (ex: step-3)
+- a solution branch (ex: step-3-solution)
