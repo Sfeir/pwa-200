@@ -4,7 +4,7 @@ var cacheAppShellStatic = [
   "/",
   "mocks/notification.json",
   "mocks/people.json",
-  "manifest/manifest.json"
+  "manifest/manifest.json",
   "/index.html",
   "/bootstrap/dist/css/bootstrap.min.css",
   "/angular-material/angular-material.min.css",
@@ -30,6 +30,21 @@ var cacheAppShellStatic = [
   "/js/components/filters/capitalize.js",
   "/offline.html"
 ];
+
+function urlB64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding)
+    .replace(/\-/g, '+')
+    .replace(/_/g, '/');
+
+  const rawData = window.atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
+}
 
 self.addEventListener('install', function (event) {
   console.log('event install');
