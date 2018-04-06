@@ -4,7 +4,7 @@ var cacheAppShellStatic = [
   "/",
   "mocks/notification.json",
   "mocks/people.json",
-  "manifest/manifest.json"
+  "manifest/manifest.json",
   "/index.html",
   "/bootstrap/dist/css/bootstrap.min.css",
   "/angular-material/angular-material.min.css",
