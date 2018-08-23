@@ -56,7 +56,7 @@ gulp.task('eslint', function() {
 gulp.task('watch', function() {
     browserSync.init({
         server: {
-            baseDir: [`./${stepDir}`, './node_modules']
+            baseDir: ['./common', `./${stepDir}`, './node_modules']
         },
         port: 8080
     });
