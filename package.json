@@ -29,7 +29,7 @@
     "PWA, service worker, angular, materials"
   ],
   "scripts": {
-    "start": "gulp"
+    "start": "gulp watch --step-$npm_config_step"
   },
   "bugs": {
     "url": "https://github.com/Sfeir/peoples/issues"

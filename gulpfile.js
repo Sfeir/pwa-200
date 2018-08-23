@@ -13,7 +13,14 @@ var fs = require('fs');
 var del = require('del');
 var browserSync = require('browser-sync').create();
 
-var stepDir = 'master';
+var DEFAULT_STEP = 'master';
+var stepArg = process.argv.find(arg => arg.startsWith('--step-'));
+var stepDir = stepArg && stepArg.replace('--step-', '');
+stepDir = stepDir === '' || stepDir === 'true' ? DEFAULT_STEP : `step-${stepDir}`;
+if (!fs.existsSync(stepDir)) {
+    stepDir = DEFAULT_STEP;
+}
+console.log(`Will run step ${stepDir}`);
 
 
 gulp.task('copy', ['clean'], function build() {
