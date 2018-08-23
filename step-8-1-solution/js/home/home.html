@@ -1,0 +1,9 @@
+<md-content class="people-random" layout="row" layout-wrap layout-align="center center" ng-class="!query || (query.length < 1) ? 'animation-show' : 'animation-hide';">
+    <div class="people-list-loading" ng-show="homeCtrl.loading" layout="row" layout-wrap layout-align="center center">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <div flex="100" flex-xs="100" flex-sm="75" flex-gt-sm="40" ng-show="!homeCtrl.loading">
+        <h1>You have {{homeCtrl.people.length}} friends. Do you know ?</h1>
+        <people-card people="homeCtrl.random"></people-card>
+    </div>
+</md-content>
