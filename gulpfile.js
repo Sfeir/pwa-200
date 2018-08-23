@@ -16,7 +16,7 @@ var browserSync = require('browser-sync').create();
 var DEFAULT_STEP = 'master';
 var stepArg = process.argv.find(arg => arg.startsWith('--step-'));
 var stepDir = stepArg && stepArg.replace('--step-', '');
-stepDir = stepDir === '' || stepDir === 'true' ? DEFAULT_STEP : `step-${stepDir}`;
+stepDir = stepDir === '' || stepDir === 'true' ? DEFAULT_STEP : `steps/step-${stepDir}`;
 if (!fs.existsSync(stepDir)) {
     stepDir = DEFAULT_STEP;
 }
