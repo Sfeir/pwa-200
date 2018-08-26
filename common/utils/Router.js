@@ -11,9 +11,10 @@ export class Router {
 
 
   resolve() {
-    const path = window.location.pathname;
-    if (this.routes.has(path)) {
-      this.routes.get(path)();
+    const routeParams = window.location.pathname.split('/').slice(1);
+    const routePath = routeParams.shift();
+    if (this.routes.has(routePath)) {
+      this.routes.get(routePath)(routeParams);
     } else if (this.defaultRoute) {
       this.navigate(this.defaultRoute);
     } else {

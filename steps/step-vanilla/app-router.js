@@ -6,7 +6,7 @@ const root = document.querySelector("#root");
 const home = new HomeComponent(root, { peoples: services.get('peoples')});
 
 const routes = new Map([
-  ['/home', () => home.render()],
+  ['home', (params) => home.render(params)],
 ]);
 
 export const appRouter = new Router(routes, '/home');

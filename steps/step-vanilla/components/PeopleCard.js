@@ -88,7 +88,7 @@ export class PeopleCardComponent extends Component {
 
           +(describe ?
           `<div flex class="img-circle">
-              <img class="thumb" err-src="img/profile.svg" src="${people.photo}" alt="image profile" />
+              <img class="thumb" err-src="/img/profile.svg" src="/${people.photo}" alt="image profile" />
           </div>`: ''
           )+
 
@@ -98,7 +98,7 @@ export class PeopleCardComponent extends Component {
         `<div class="mdl-card__media" flex="30">
             <div class="card-media">
                 <a href="#/people/${people.email}">
-                  <img class="thumb" err-src="img/profile.svg" src="${people.photo}">
+                  <img class="thumb" err-src="/img/profile.svg" src="/${people.photo}">
                 </a>
             </div>
           <div>`: ''
