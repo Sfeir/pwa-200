@@ -48,9 +48,8 @@ export class HomeComponent extends Component {
     } else {
       this.content.render(`
         <div class="people-random">
-          <div flex="100" flex-xs="100" flex-sm="75" flex-gt-sm="40"">
+          <div data-people-card>
               <h1>You have ${this.peoples.length} friends. Do you know ?</h1>
-              <div data-people-card></div>
           </div>
         </div>
       `);
