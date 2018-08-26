@@ -3,6 +3,9 @@ import "babel-polyfill";
 import { setupErrorListener } from "../../common/utils/setupErrorListener";
 import { appRouter } from "./app-router";
 
+import 'normalize.css';
+import "../../common/css/app.css";
+
 setupErrorListener();
 
 appRouter.resolve();

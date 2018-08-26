@@ -217,7 +217,7 @@ section > h1 {
 .people-detail{
   min-height: 650px;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0); // pour probleme index iphone
+  background-color: rgba(0, 0, 0, 0); /* pour probleme index iphone */
 }
 
 @media screen and (max-width: 720px) {
@@ -225,8 +225,9 @@ section > h1 {
     padding: 0px;
   }
 }
+
 .background-md-card{
-  background-color: #E84FOE;
+  background-color: '#E84FOE';
   box-shadow: 0 4px 5px -2px rgba(0,0,0,.26);
 }
 
@@ -250,7 +251,7 @@ section > h1 {
 
 /* FAB */
 .md-fab.md-install{
-  display: none; !important;
+  display: none !important;
   background-color: #0168AB !important;
   position: absolute !important;
   bottom: 5px;
@@ -263,7 +264,7 @@ section > h1 {
 
 /* SUBSCRIPTION */
 #subscribeButton {
-  display: none; !important;
+  display: none !important;
 }
 
 #subscribeButton.show{
@@ -275,5 +276,5 @@ section > h1 {
 }
 
 #subscribeButton.show .subscribe, #subscribeButton.show.subscribe .unsubscribe{
-  display: none; !important;
+  display: none !important;
 }
