@@ -2,6 +2,7 @@ import { Component } from "../../../common/utils/component/Component";
 import { PlainComponent } from "../../../common/utils/component/PlainComponent";
 
 import "./Home.css";
+import { PeopleCardComponent } from "./PeopleCard";
 
 export class HomeComponent extends Component {
   constructor(parent, { peoples }) {
@@ -15,9 +16,12 @@ export class HomeComponent extends Component {
 
   async getPeoples() {
     this.peoples = await this.peoplesService.getPeoples();
-    this.random = this.peoples[Math.floor(Math.random() * this.peoples.length)];
     this.loading = false;
     this.render();
+  }
+
+  get random() {
+    return this.peoples[Math.floor(Math.random() * this.peoples.length)];
   }
 
   init() {
@@ -46,9 +50,13 @@ export class HomeComponent extends Component {
         <div class="people-random">
           <div flex="100" flex-xs="100" flex-sm="75" flex-gt-sm="40"">
               <h1>You have ${this.peoples.length} friends. Do you know ?</h1>
+              <div data-people-card></div>
           </div>
         </div>
       `);
+      const randomPeopleWrapper = this.content.container.querySelector('[data-people-card]');
+      this.peopleCard = new PeopleCardComponent(randomPeopleWrapper);
+      this.peopleCard.render({ people: this.random });
     }
   }
 }
