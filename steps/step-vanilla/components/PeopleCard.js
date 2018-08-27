@@ -1,6 +1,8 @@
 import { Component } from "../../../common/utils/component/Component";
 import { PlainComponent } from "../../../common/utils/component/PlainComponent";
 import { compileTemplate } from "../../../common/utils/component/compileTemplate";
+import { activateLinks } from "../../../common/utils/activateLinks";
+import { appRouter } from "../app-router";
 
 const capitalize = ([s, ...tring]) => [s.toUpperCase(), ...tring].join('');
 const mySplit = (string) => string ? string.split('@')[0] : '';
@@ -54,6 +56,8 @@ export class PeopleCardComponent extends Component {
       this.content.container.querySelector('[data-tab-infos]').replaceWith(this.tabInfo(params));
       this.content.container.querySelector('[data-card-footer]').replaceWith(this.footer(params));
     }
+
+    activateLinks(this.container, appRouter);
   }
 
   title({ people, describe, }) {
@@ -62,7 +66,7 @@ export class PeopleCardComponent extends Component {
         <div class="${describe ? 'first-info-people': ''} mdl-card__title-text" layout="${describe ? 'row': 'column'}" layout-align="space-around">
           <span flex="75">
             <span class="md-headline">
-              <a data-link="/people/${people.email}">${capitalize(people.firstname)} ${(people.lastname.toUpperCase())}</a>
+              <a data-link="/people/${people.id}">${capitalize(people.firstname)} ${(people.lastname.toUpperCase())}</a>
             </span>
             <span layout="column" class="layout-column" flex="100">
               <div class="people-name">${people.functionName}</div>

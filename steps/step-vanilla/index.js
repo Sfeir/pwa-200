@@ -5,15 +5,11 @@ import { appRouter } from "./app-router";
 
 import 'normalize.css';
 import "../../common/css/app.css";
+import { activateLinks } from "../../common/utils/activateLinks";
 
 setupErrorListener();
 
 appRouter.resolve();
 
-document.querySelectorAll('[data-link]').forEach(el => {
-  const route = el.getAttribute('data-link');
-  el.addEventListener('click', e => {
-    e.preventDefault();
-    appRouter.navigate(route);
-  });
-})
+activateLinks(document, appRouter);
+

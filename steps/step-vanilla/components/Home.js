@@ -1,10 +1,10 @@
-import { Component } from "../../../common/utils/component/Component";
+import { RoutedComponent } from "../../../common/utils/component/RoutedComponent";
 import { PlainComponent } from "../../../common/utils/component/PlainComponent";
 
 import "./Home.css";
 import { PeopleCardComponent } from "./PeopleCard";
 
-export class HomeComponent extends Component {
+export class HomeComponent extends RoutedComponent {
   constructor(parent, { peoples }) {
     super(parent);
     this.peoplesService = peoples;

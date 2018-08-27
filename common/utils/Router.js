@@ -1,6 +1,7 @@
 export class Router {
 
-  constructor(routes, defaultRoute) {
+  constructor(container, routes, defaultRoute) {
+    this.container = container;
     this.routes = routes;
     this.defaultRoute = defaultRoute;
 
@@ -9,12 +10,19 @@ export class Router {
     };
   }
 
-
   resolve() {
     const routeParams = window.location.pathname.split('/').slice(1);
     const routePath = routeParams.shift();
     if (this.routes.has(routePath)) {
-      this.routes.get(routePath)(routeParams);
+      this.routes.forEach(({ component }) => {
+        component.destroy();
+      });
+      const { component, render } = this.routes.get(routePath);
+      if (render) {
+        render(routeParams)
+      } else {
+        component.render(routeParams)
+      }
     } else if (this.defaultRoute) {
       this.navigate(this.defaultRoute);
     } else {
