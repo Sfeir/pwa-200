@@ -19,12 +19,19 @@ module.exports = function(env = {}, args) {
       dist: env.prod ? 'build': '.tmp',
       assets: 'assets',
       commons: 'common',
+      indexTemplate: ''
     };
 
     fs.accessSync(path.resolve(__dirname, paths.step));
 
-    const indexTemplate = path.join(paths.step, '/templates/landing.html');
-    fs.accessSync(indexTemplate, fs.constants.R_OK);
+    const landingFile = '/templates/landing.html';
+    try {
+      paths.indexTemplate = path.join(paths.step, landingFile);
+      fs.accessSync(paths.indexTemplate, fs.constants.R_OK);
+    } catch {
+      paths.indexTemplate = path.join('common/default-for-steps/', env.step.split('-').shift(), landingFile);
+      fs.accessSync(paths.indexTemplate, fs.constants.R_OK);
+    }
 
   } catch {
     console.error(`
@@ -75,7 +82,7 @@ Check the folder name in steps/, read the README and try again.
     plugins: [
       // Emit HTML files that serve the app
       new HtmlWebpackPlugin({
-        template: path.join(paths.step, '/templates/landing.html'),
+        template: path.resolve(paths.indexTemplate),
         filename: path.resolve(__dirname, paths.dist, 'index.html'),
         alwaysWriteToDisk: true
       })
