@@ -20,14 +20,14 @@ var cacheAppShellStatic = [
   "/angular-animate/angular-animate.min.js",
   "/angular-material/angular-material.min.js",
   "/angular-aria/angular-aria.min.js",
-  "/js/app.module.js",
-  "/js/app.config.js",
-  "/js/home/home.module.js",
-  "/js/home/home.controller.js",
-  "/js/components/components.module.js",
-  "/js/components/services/people.service.js",
-  "/js/components/directives/people-card/people-card.js",
-  "/js/components/filters/capitalize.js",
+  "/angularjs/app.module.js",
+  "/angularjs/app.config.js",
+  "/angularjs/home/home.module.js",
+  "/angularjs/home/home.controller.js",
+  "/angularjs/components/components.module.js",
+  "/angularjs/components/services/people.service.js",
+  "/angularjs/components/directives/people-card/people-card.js",
+  "/angularjs/components/filters/capitalize.js",
   "/offline.html"
 ];
 

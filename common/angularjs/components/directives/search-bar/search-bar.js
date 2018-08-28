@@ -11,7 +11,7 @@
                 filteredPeople: '<',
                 query: '='
             },
-            templateUrl: './js/components/directives/search-bar/search-bar.html',
+            templateUrl: './angularjs/components/directives/search-bar/search-bar.html',
             link : function(scope) {
                 scope.pressEnter = function() {
                     $location.path('/people/' + scope.filteredPeople.email);

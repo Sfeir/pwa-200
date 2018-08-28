@@ -33,7 +33,7 @@ gulp.task('copy', ['clean'], function build() {
     var mocks = gulp.src(`${stepDir}/mocks/*`)
       .pipe(gulp.dest('build/mocks/'));
 
-    var templates = gulp.src(`${stepDir}/js/**/*.html`)
+    var templates = gulp.src(`${stepDir}/angularjs/**/*.html`)
       .pipe(gulp.dest('build/templates/'));
 
     var offline = gulp.src(`${stepDir}/offline.html`)
@@ -48,7 +48,7 @@ gulp.task('copy', ['clean'], function build() {
 });
 
 gulp.task('eslint', function() {
-    return gulp.src(`${stepDir}/js/**/*.js`)
+    return gulp.src(`${stepDir}/angularjs/**/*.js`)
       .pipe(eslint())
       .pipe(eslint.format());
 });
@@ -66,7 +66,7 @@ gulp.task('watch', function() {
     gulp.watch(`${stepDir}/css/**/*.css`).on('change', function(evt) {
         browserSync.reload();
     });
-    gulp.watch(`${stepDir}/js/**/*.js`).on('change', function(evt) {
+    gulp.watch(`${stepDir}/angularjs/**/*.js`).on('change', function(evt) {
         browserSync.reload();
     });
 });
@@ -98,8 +98,8 @@ gulp.task('update-sw', ['usemin'], function() {
       .pipe(replace(/'\/'/, '\'/peoples/\''))
       .pipe(gulp.dest('build'));
 
-    var initsw = gulp.src(`${stepDir}/js/initSw.js`)
-      .pipe(gulp.dest('build/js/'));
+    var initsw = gulp.src(`${stepDir}/angularjs/initSw.js`)
+      .pipe(gulp.dest('build/angularjs/'));
 
     var manifest = gulp.src(`${stepDir}/manifest/manifest.json`)
       .pipe(gulp.dest('build/manifest'));
