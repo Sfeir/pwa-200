@@ -15,7 +15,7 @@ module.exports = function(env = {}, args) {
   try {
 
     paths = {
-      step: env.step ? `steps/step-${env.step}/` : `common/app/`,
+      step: env.step ? `steps/${env.step}/` : `common/app/`,
       dist: env.prod ? 'build': '.tmp',
       assets: 'assets',
       commons: 'common',
