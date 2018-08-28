@@ -10,7 +10,8 @@ module.exports = function(env = {}, args) {
   const paths = {
     steps: `steps/step-${env.step || 'vanilla' }/`,
     dist: env.prod ? 'build': '.tmp',
-    assets: 'common'
+    assets: 'assets',
+    commons: 'common'
   };
 
   return {
@@ -58,7 +59,8 @@ module.exports = function(env = {}, args) {
     devServer: {
       contentBase: [
         path.join(__dirname, paths.dist),
-        path.join(__dirname, paths.assets)
+        path.join(__dirname, paths.assets),
+        path.join(__dirname, paths.commons)
       ],
       compress: true,
       historyApiFallback: true

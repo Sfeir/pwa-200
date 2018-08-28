@@ -4,7 +4,7 @@ import { setupErrorListener } from "../../common/utils/setupErrorListener";
 import { appRouter } from "./app-router";
 
 import 'normalize.css';
-import "../../common/css/app.css";
+import "../../assets/css/app.css";
 import { activateLinks } from "../../common/utils/activateLinks";
 
 setupErrorListener();
@@ -12,4 +12,3 @@ setupErrorListener();
 appRouter.resolve();
 
 activateLinks(document, appRouter);
-
