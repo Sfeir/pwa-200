@@ -1,5 +1,5 @@
-import { RoutedComponent } from "../../../common/utils/component/RoutedComponent";
-import { PlainComponent } from "../../../common/utils/component/PlainComponent";
+import { RoutedComponent } from "../../utils/component/RoutedComponent";
+import { PlainComponent } from "../../utils/component/PlainComponent";
 
 import "./Home.css";
 import { PeopleCardComponent } from "./PeopleCard";

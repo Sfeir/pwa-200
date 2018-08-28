@@ -1,11 +1,11 @@
 import "babel-polyfill";
 
-import { setupErrorListener } from "../../common/utils/setupErrorListener";
+import { setupErrorListener } from "../utils/setupErrorListener";
 import { appRouter } from "./app-router";
 
 import 'normalize.css';
 import "../../assets/css/app.css";
-import { activateLinks } from "../../common/utils/activateLinks";
+import { activateLinks } from "../utils/activateLinks";
 
 setupErrorListener();
 

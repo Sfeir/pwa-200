@@ -1,7 +1,7 @@
-import { Component } from "../../../common/utils/component/Component";
-import { PlainComponent } from "../../../common/utils/component/PlainComponent";
-import { compileTemplate } from "../../../common/utils/component/compileTemplate";
-import { activateLinks } from "../../../common/utils/activateLinks";
+import { Component } from "../../utils/component/Component";
+import { PlainComponent } from "../../utils/component/PlainComponent";
+import { compileTemplate } from "../../utils/component/compileTemplate";
+import { activateLinks } from "../../utils/activateLinks";
 import { appRouter } from "../app-router";
 
 const capitalize = ([s, ...tring]) => [s.toUpperCase(), ...tring].join('');

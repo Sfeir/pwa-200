@@ -8,7 +8,7 @@ module.exports = function(env = {}, args) {
   }
 
   const paths = {
-    steps: `steps/step-${env.step || 'vanilla' }/`,
+    steps: env.step ?`steps/step-${env.step}/` : `common/app/`,
     dist: env.prod ? 'build': '.tmp',
     assets: 'assets',
     commons: 'common'

@@ -1,4 +1,4 @@
-import { Router } from '../../common/utils/Router';
+import { Router } from '../utils/Router';
 import { HomeComponent } from "./components/Home";
 import { services } from './services';
 import { PeopleComponent } from './components/People';
