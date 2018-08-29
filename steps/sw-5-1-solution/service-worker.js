@@ -1,17 +1,23 @@
 console.log('Service worker ok =D');
 
-
 var cacheAppShellStatic = [
-  // exercice 5-1: add files here
+  "/",
+  "/index.html",
+  "/mdl/material.min.css",
+  "/mdl/material.min.js",
+  "/css/material-icons.css",
+  "/css/font/MaterialIcons-Regular.woff2",
+  "/img/logo-app.png",
 ];
 
 self.addEventListener('install', function (event) {
   console.log('event install');
   event.waitUntil(
-
-    // exercice 5-1: update this section and add your code here
-    self.skipWaiting()
-
+    caches.open('cache-static').then(function (cache) {
+      return cache.addAll(cacheAppShellStatic);
+    }).then(function () {
+      return self.skipWaiting();
+    })
   );
 });
 
@@ -24,19 +30,5 @@ self.addEventListener('activate', function (event) {
 
 self.addEventListener('fetch', function (event) {
   const url = new URL(event.request.url);
-  const catImage = 'img/cat.jpg';
-
-  if(url.pathname.includes('socket.io')
-      || url.origin.startsWith('chrome-extension')){
-    return false;
-  }
-  else {
-
-    if (url.pathname.endsWith('jpg')) {
-      event.respondWith(fetch(catImage));
-      return false;
-    }
-
-  }
-
+  console.log('fetch:' + url);
 });
