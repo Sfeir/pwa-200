@@ -31,4 +31,5 @@ self.addEventListener('activate', function (event) {
 
 self.addEventListener('fetch', function (event) {
   // TODO: add your code here
+  // hint: fetch return a promise ;)
 });
