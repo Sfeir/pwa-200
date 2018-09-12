@@ -6,8 +6,6 @@ var cacheAppShellStatic = [
   "mocks/people.json",
   "manifest/manifest.json",
   "/index.html",
-  "/bootstrap/dist/css/bootstrap.min.css",
-  "/angular-material/angular-material.min.css",
   "/css/app.css",
   "/img/bg_left.png",
   "/img/bg_right.png",
@@ -15,21 +13,13 @@ var cacheAppShellStatic = [
   "/img/logo-sfeir.svg",
   "/img/offline.jpg",
   "/img/search.svg",
-  "/angular/angular.min.js",
-  "/angular-route/angular-route.min.js",
-  "/angular-animate/angular-animate.min.js",
-  "/angular-material/angular-material.min.js",
-  "/angular-aria/angular-aria.min.js",
-  "/angularjs/app.module.js",
-  "/angularjs/app.config.js",
-  "/angularjs/home/home.module.js",
-  "/angularjs/home/home.controller.js",
-  "/angularjs/components/components.module.js",
-  "/angularjs/components/services/people.service.js",
-  "/angularjs/components/directives/people-card/people-card.js",
-  "/angularjs/components/filters/capitalize.js",
+  "/mdl/material.min.css",
+  "/mdl/material.min.js",
+  "/css/material-icons.css",
+  "/css/font/MaterialIcons-Regular.woff2",
   "/offline.html"
 ];
+
 
 self.addEventListener('install', function (event) {
   console.log('event install');
