@@ -3,19 +3,30 @@ const exit = require('process').exit;
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+const DEFAULT_STEP = 'common/app';
 
 module.exports = function(env = {}, args) {
   if (process.env.NODE_ENV === 'production') {
     env.production = true;
   }
 
+  const stepArg = process.argv.find(arg => arg.startsWith('--step-'));
+  let stepDir = stepArg && stepArg.replace('--step-', '');
+  const STEPS_DIRECTORY = 'steps/';
+  stepDir = stepDir === '' || stepDir === 'true' ? DEFAULT_STEP : `${STEPS_DIRECTORY}${stepDir}`;
+  const stepGenericName = stepDir.substring(STEPS_DIRECTORY.length).split('-').shift();
+  if (!fs.existsSync(stepDir)) {
+      stepDir = DEFAULT_STEP;
+  }
+
+  console.log(`Will run step ${stepDir}`);
   console.log(`=== Running ${env.step ? `step ${env.step}` : `the base app`} ===`);
 
   let paths;
   try {
 
     paths = {
-      step: env.step ? `steps/${env.step}/` : `common/app/`,
+      step: stepDir,
       dist: env.prod ? 'build': '.tmp',
       assets: 'assets',
       commons: 'common',
@@ -29,7 +40,7 @@ module.exports = function(env = {}, args) {
       paths.indexTemplate = path.join(paths.step, landingFile);
       fs.accessSync(paths.indexTemplate, fs.constants.R_OK);
     } catch {
-      paths.indexTemplate = path.join('common/default-for-steps/', env.step.split('-').shift(), landingFile);
+      paths.indexTemplate = path.join('common/default-for-steps/', stepGenericName, landingFile);
       fs.accessSync(paths.indexTemplate, fs.constants.R_OK);
     }
 
