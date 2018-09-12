@@ -7,8 +7,12 @@
   <meta name="theme-color" content="#020307">
   <title>Sfeir People</title>
 
+  <link rel="manifest" href="manifest/manifest.json">
+
   <link rel="stylesheet" href="/css/material-icons.css">
   <link rel="stylesheet" href="/mdl/material.min.css">
+  <link rel="stylesheet" href="css/md-overwrite.css">
+  <link rel="shortcut icon" href="/img/favicon.ico">
   <script src="/mdl/material.min.js"></script>
 </head>
 
@@ -39,6 +43,17 @@
       </div>
     </main>
   </div>
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register('service-worker.js')
+      .then(function () {
+        console.log('Service worker installed');
+      })
+      .catch(err => {
+        consle.error('Error registering Service Worker', err);
+      });
+    }
+  </script>
 </body>
 
 </html>
