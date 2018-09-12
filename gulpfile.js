@@ -16,7 +16,7 @@ var browserSync = require('browser-sync').create();
 var DEFAULT_STEP = 'master';
 var stepArg = process.argv.find(arg => arg.startsWith('--step-'));
 var stepDir = stepArg && stepArg.replace('--step-', '');
-stepDir = stepDir === '' || stepDir === 'true' ? DEFAULT_STEP : `steps/step-${stepDir}`;
+stepDir = stepDir === '' || stepDir === 'true' ? DEFAULT_STEP : `steps/${stepDir}`;
 if (!fs.existsSync(stepDir)) {
     stepDir = DEFAULT_STEP;
 }
@@ -66,7 +66,7 @@ gulp.task('watch', function() {
     gulp.watch(`${stepDir}/css/**/*.css`).on('change', function(evt) {
         browserSync.reload();
     });
-    gulp.watch(`${stepDir}/angularjs/**/*.js`).on('change', function(evt) {
+    gulp.watch(`${stepDir}/**/*.js`).on('change', function(evt) {
         browserSync.reload();
     });
 });
