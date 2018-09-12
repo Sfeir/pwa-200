@@ -120,6 +120,7 @@ header {
   width: 100%;
 }
 
+
 article section {
   float: left;
   padding: 0 2em;
@@ -150,6 +151,26 @@ section > h1 {
 }
 
 /* LIST PEOPLE */
+.people-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.people-card-list .mdl-card{
+  margin-bottom: 10px;
+}
+
+.people-card-list .mdl-card a[href^=mailto],
+.people-card-list .mdl-card a[href^=tel]{
+  font-size:15px;
+}
+
+.people-card-list .mdl-card .mdl-card__media{
+  width: 100px;
+}
+
 .people-card-list .first{
   box-shadow: 0px 1px 3px 0px #0168AB, 0px 1px 1px 0px #0168AB, 0px 2px 1px -1px #0168AB;
 }
@@ -160,6 +181,11 @@ section > h1 {
 
 .people-random, .people-list-all, .people-list, .people-detail, .view-frame{
   background-color: #FAFAFA;
+}
+
+.people-random .mdl-card{
+  margin: auto;
+  width: 500px;
 }
 
 .people-list-all, .people-detail, .people-random {

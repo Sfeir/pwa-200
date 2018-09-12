@@ -61,3 +61,16 @@ md-input-container {
 .view-frame md-input-container .md-errors-spacer{
 	display: none;
 }
+
+nav.mdl-navigation a, nav.mdl-navigation a:visited{
+  color:white;
+}
+
+.mdl-layout a {
+  color: #337ab7;
+}
+
+
+header.mdl-layout__header{
+  background-color: #0268ab;
+}
