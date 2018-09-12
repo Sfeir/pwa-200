@@ -4,7 +4,6 @@ var cacheAppShellStatic = [
   "/",
   "mocks/notification.json",
   "mocks/people.json",
-  "manifest/manifest.json",
   "/index.html",
   "/css/app.css",
   "/img/bg_left.png",

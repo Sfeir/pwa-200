@@ -65,7 +65,8 @@
       //Show button
       installButton.classList.add('show');
     });
-    var deferredEvent;
+    let deferredEvent;
+    console.log(installButton);
     installButton.addEventListener('click', function onInstall() {
       if (deferredEvent !== undefined) {
         // The user has had a postive interaction with our app and Chrome

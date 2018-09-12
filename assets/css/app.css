@@ -279,14 +279,11 @@ section > h1 {
 #shellToolbar{
   position: absolute;
   bottom: 5px;
-  right: 5px;
+  right: 10px;
+  z-index: 200;
 }
 #installButton.mdl-button{
-  display: none !important;
-  background-color: #0168AB !important;
-  position: absolute !important;
-  bottom: 5px;
-  right: 10px;
+  display: none;
 }
 
 #installButton.mdl-button.show{
