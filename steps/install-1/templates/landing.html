@@ -39,6 +39,12 @@
     </main>
   </div>
 
+  <section id="shellToolbar" class="extend-toolbar">
+      <button id="installButton" class="mdl-button mdl-js-button mdl-button--fab mdl-button--primary">
+          <i class="material-icons">vertical_align_bottom</i>
+        </button>
+    </section>
+
   <script>
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register('service-worker.js')
@@ -49,6 +55,10 @@
         consle.error('Error registering Service Worker', err);
       });
     }
+  </script>
+  
+  <script>
+    // Your code here
   </script>
 
 </body>

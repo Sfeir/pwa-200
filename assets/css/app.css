@@ -276,7 +276,12 @@ section > h1 {
 }
 
 /* FAB */
-.md-fab.md-install{
+#shellToolbar{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+#installButton.mdl-button{
   display: none !important;
   background-color: #0168AB !important;
   position: absolute !important;
@@ -284,7 +289,7 @@ section > h1 {
   right: 10px;
 }
 
-.md-fab.md-install.show{
+#installButton.mdl-button.show{
   display: block;
 }
 

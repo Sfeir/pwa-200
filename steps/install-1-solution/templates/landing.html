@@ -39,6 +39,12 @@
     </main>
   </div>
 
+  <section id="shellToolbar" class="extend-toolbar">
+      <button id="installButton" class="mdl-button mdl-js-button mdl-button--fab mdl-button--primary">
+          <i class="material-icons">vertical_align_bottom</i>
+        </button>
+    </section>
+
   <script>
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register('service-worker.js')
@@ -49,6 +55,37 @@
         consle.error('Error registering Service Worker', err);
       });
     }
+  </script>
+  
+  <script>
+    const installButton = document.getElementById('installButton');
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      deferredEvent = e;
+      //Show button
+      installButton.classList.add('show');
+    });
+    var deferredEvent;
+    installButton.addEventListener('click', function onInstall() {
+      if (deferredEvent !== undefined) {
+        // The user has had a postive interaction with our app and Chrome
+        // has tried to prompt previously, so let's show the prompt.
+        deferredEvent.prompt();
+        // Follow what the user has done with the prompt.
+        deferredEvent.userChoice.then(function (choiceResult) {
+          console.log(choiceResult.outcome);
+          if (choiceResult.outcome == 'dismissed') {
+            console.log('User cancelled home screen install');
+          }
+          else {
+            console.log('User added to home screen');
+          }
+          installButton.classList.remove('show');
+          // We no longer need the prompt.  Clear it up.
+          deferredEvent = null;
+        });
+      }
+    });
   </script>
 
 </body>
