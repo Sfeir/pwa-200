@@ -39,12 +39,12 @@ module.exports = function(env = {}, args) {
     try {
       paths.indexTemplate = path.join(paths.step, landingFile);
       fs.accessSync(paths.indexTemplate, fs.constants.R_OK);
-    } catch {
+    } catch (err) {
       paths.indexTemplate = path.join('common/default-for-steps/', stepGenericName, landingFile);
       fs.accessSync(paths.indexTemplate, fs.constants.R_OK);
     }
 
-  } catch {
+  } catch (err) {
     console.error(`
 
     ¯\_(ツ)_/¯ Oops ...
@@ -57,12 +57,14 @@ Check the folder name in steps/, read the README and try again.
   }
 
   try {
-    const stepIndex = path.join(__dirname, paths.step, 'index.js');
+    const stepIndex = path.join(__dirname, paths.step, 'app/index.js');
     fs.accessSync(stepIndex, fs.constants.R_OK);
     paths.indexjs = stepIndex;
   } catch (err) {
     paths.indexjs = path.resolve('common/app', 'index.js')
   }
+
+  console.log(`Will use ${paths.indexjs} as entry point`);
 
   return {
     mode: 'development',
