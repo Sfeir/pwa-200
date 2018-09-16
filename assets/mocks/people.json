@@ -24,6 +24,10 @@
     "entity": "Sfeir-Paris",
     "currentClient": "Adeo",
     "workcity": "Luxembourg",
+    "workCoords": {
+      "lat":49.8154033,
+      "long":5.8524553
+    },
     "workAdress": "rue...",
     "manager": "Didier",
     "department": "Compta",
@@ -84,9 +88,13 @@
     },
     "functionName": "Greta",
     "functionDescription": "Teresa",
-    "entity": "Sfeir-Luxembourg",
+    "entity": "Sfeir-Nantes",
     "currentClient": "Adeo",
-    "workcity": "Paris",
+    "workcity": "Nantes",
+    "workCoords": {
+      "lat":47.2383171,
+      "long":-1.6302674
+    },
     "workAdress": "Place...",
     "manager": "Bruno",
     "department": "Recrutement",
@@ -148,9 +156,13 @@
     },
     "functionName": "Pugh",
     "functionDescription": "Roy",
-    "entity": "Sfeir-Lille",
+    "entity": "Sfeir-Nantes",
     "currentClient": "Adeo",
-    "workcity": "Paris",
+    "workcity": "Nantes",
+    "workCoords": {
+      "lat":47.2383171,
+      "long":-1.6302674
+    },
     "workAdress": "rue...",
     "manager": "Aurélien",
     "department": "DO",
@@ -212,9 +224,13 @@
     },
     "functionName": "Clarice",
     "functionDescription": "Paige",
-    "entity": "Sfeir-Luxembourg",
+    "entity": "Sfeir-Nantes",
     "currentClient": "Sanofi",
-    "workcity": "Paris",
+    "workcity": "Nantes",
+    "workCoords": {
+      "lat":47.2383171,
+      "long":-1.6302674
+    },
     "workAdress": "Place...",
     "manager": "Christophe",
     "department": "Commerce",
@@ -279,6 +295,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Generali",
     "workcity": "Luxembourg",
+    "workCoords": {
+      "lat":49.8154033,
+      "long":5.8524553
+    },
     "workAdress": "Boulevard..",
     "manager": "Céline",
     "department": "Compta",
@@ -340,9 +360,13 @@
     },
     "functionName": "Walters",
     "functionDescription": "Charlotte",
-    "entity": "Sfeir-Luxembourg",
+    "entity": "Sfeir-Nantes",
     "currentClient": "Adeo",
-    "workcity": "Paris",
+    "workcity": "Nantes",
+    "workCoords": {
+      "lat":47.2383171,
+      "long":-1.6302674
+    },
     "workAdress": "Place...",
     "manager": "Didier",
     "department": "DO",
@@ -407,6 +431,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Generali",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "rue...",
     "manager": "Aurélien",
     "department": "DO",
@@ -471,6 +499,10 @@
     "entity": "Sfeir-Est",
     "currentClient": "Sanofi",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "rue...",
     "manager": "Aurélien",
     "department": "Recrutement",
@@ -535,6 +567,10 @@
     "entity": "Sfeir-Est",
     "currentClient": "Generali",
     "workcity": "Lille",
+    "workCoords": {
+      "lat":50.6311167,
+      "long":3.0120553
+    },
     "workAdress": "Boulevard..",
     "manager": "Céline",
     "department": "Commerce",
@@ -599,6 +635,10 @@
     "entity": "Sfeir-Luxembourg",
     "currentClient": "Sanofi",
     "workcity": "Strasbourg",
+    "workCoords": {
+      "lat":48.5692058,
+      "long":7.6918828
+    },
     "workAdress": "rue...",
     "manager": "Céline",
     "department": "Recrutement",
@@ -663,6 +703,10 @@
     "entity": "Sfeir-Luxembourg",
     "currentClient": "Adeo",
     "workcity": "Strasbourg",
+    "workCoords": {
+      "lat":48.5692058,
+      "long":7.6918828
+    },
     "workAdress": "rue...",
     "manager": "Aurélien",
     "department": "Compta",
@@ -724,9 +768,13 @@
     },
     "functionName": "Francis",
     "functionDescription": "Maude",
-    "entity": "Sfeir-Est",
+    "entity": "Sfeir-Nantes",
     "currentClient": "Adeo",
-    "workcity": "Luxembourg",
+    "workcity": "Nantes",
+    "workCoords": {
+      "lat":47.2383171,
+      "long":-1.6302674
+    },
     "workAdress": "Place...",
     "manager": "Céline",
     "department": "Recrutement",
@@ -791,6 +839,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Sanofi",
     "workcity": "Lille",
+    "workCoords": {
+      "lat":50.6311167,
+      "long":3.0120553
+    },
     "workAdress": "rue...",
     "manager": "Christophe",
     "department": "Commerce",
@@ -855,6 +907,10 @@
     "entity": "Sfeir-Est",
     "currentClient": "Generali",
     "workcity": "Lille",
+    "workCoords": {
+      "lat":50.6311167,
+      "long":3.0120553
+    },
     "workAdress": "Boulevard..",
     "manager": "Christophe",
     "department": "Commerce",
@@ -916,9 +972,13 @@
     },
     "functionName": "Leblanc",
     "functionDescription": "Mosley",
-    "entity": "Sfeir-Luxembourg",
+    "entity": "Sfeir-Nantes",
     "currentClient": "Sanofi",
-    "workcity": "Luxembourg",
+    "workcity": "Nantes",
+    "workCoords": {
+      "lat":47.2383171,
+      "long":-1.6302674
+    },
     "workAdress": "rue...",
     "manager": "Aurélien",
     "department": "Commerce",
@@ -980,9 +1040,13 @@
     },
     "functionName": "Decker",
     "functionDescription": "Allie",
-    "entity": "Sfeir-Lille",
+    "entity": "Sfeir-Nantes",
     "currentClient": "Generali",
-    "workcity": "Luxembourg",
+    "workcity": "Nantes",
+    "workCoords": {
+      "lat":47.2383171,
+      "long":-1.6302674
+    },
     "workAdress": "Boulevard..",
     "manager": "Didier",
     "department": "Commerce",
@@ -1047,6 +1111,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Sanofi",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "rue...",
     "manager": "Céline",
     "department": "Recrutement",
@@ -1111,6 +1179,10 @@
     "entity": "Sfeir-Luxembourg",
     "currentClient": "Sanofi",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "Boulevard..",
     "manager": "Céline",
     "department": "Recrutement",
@@ -1175,6 +1247,10 @@
     "entity": "Sfeir-Paris",
     "currentClient": "Adeo",
     "workcity": "Strasbourg",
+    "workCoords": {
+      "lat":48.5692058,
+      "long":7.6918828
+    },
     "workAdress": "rue...",
     "manager": "Bruno",
     "department": "Compta",
@@ -1239,6 +1315,10 @@
     "entity": "Sfeir-Paris",
     "currentClient": "Generali",
     "workcity": "Strasbourg",
+    "workCoords": {
+      "lat":48.5692058,
+      "long":7.6918828
+    },
     "workAdress": "Boulevard..",
     "manager": "Bruno",
     "department": "Recrutement",
@@ -1300,9 +1380,13 @@
     },
     "functionName": "Gray",
     "functionDescription": "Vicki",
-    "entity": "Sfeir-Paris",
+    "entity": "Sfeir-Nantes",
     "currentClient": "Generali",
-    "workcity": "Luxembourg",
+    "workcity": "Nantes",
+    "workCoords": {
+      "lat":47.2383171,
+      "long":-1.6302674
+    },
     "workAdress": "Place...",
     "manager": "Bruno",
     "department": "DO",
@@ -1367,6 +1451,10 @@
     "entity": "Sfeir-Luxembourg",
     "currentClient": "Sanofi",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "Boulevard..",
     "manager": "Aurélien",
     "department": "Compta",
@@ -1431,6 +1519,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Adeo",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "rue...",
     "manager": "Bruno",
     "department": "Compta",
@@ -1495,6 +1587,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Sanofi",
     "workcity": "Luxembourg",
+    "workCoords": {
+      "lat":49.8154033,
+      "long":5.8524553
+    },
     "workAdress": "rue...",
     "manager": "Bruno",
     "department": "DO",
@@ -1556,9 +1652,13 @@
     },
     "functionName": "Jessica",
     "functionDescription": "Osborn",
-    "entity": "Sfeir-Paris",
+    "entity": "Sfeir-Nantes",
     "currentClient": "Sanofi",
-    "workcity": "Strasbourg",
+    "workcity": "Nantes",
+    "workCoords": {
+      "lat":47.2383171,
+      "long":-1.6302674
+    },
     "workAdress": "rue...",
     "manager": "Aurélien",
     "department": "DO",
@@ -1623,6 +1723,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Adeo",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "rue...",
     "manager": "Christophe",
     "department": "DO",
@@ -1684,9 +1788,13 @@
     },
     "functionName": "Melva",
     "functionDescription": "Cathryn",
-    "entity": "Sfeir-Lille",
+    "entity": "Sfeir-Nantes",
     "currentClient": "Adeo",
-    "workcity": "Strasbourg",
+    "workcity": "Nantes",
+    "workCoords": {
+      "lat":47.2383171,
+      "long":-1.6302674
+    },
     "workAdress": "Place...",
     "manager": "Céline",
     "department": "Commerce",
@@ -1751,6 +1859,10 @@
     "entity": "Sfeir-Paris",
     "currentClient": "Sanofi",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "Place...",
     "manager": "Christophe",
     "department": "Compta",
@@ -1815,6 +1927,10 @@
     "entity": "Sfeir-Est",
     "currentClient": "Generali",
     "workcity": "Strasbourg",
+    "workCoords": {
+      "lat":48.5692058,
+      "long":7.6918828
+    },
     "workAdress": "rue...",
     "manager": "Aurélien",
     "department": "Recrutement",
@@ -1879,6 +1995,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Sanofi",
     "workcity": "Luxembourg",
+    "workCoords": {
+      "lat":49.8154033,
+      "long":5.8524553
+    },
     "workAdress": "Place...",
     "manager": "Bruno",
     "department": "Recrutement",
@@ -1943,6 +2063,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Adeo",
     "workcity": "Lille",
+    "workCoords": {
+      "lat":50.6311167,
+      "long":3.0120553
+    },
     "workAdress": "Place...",
     "manager": "Céline",
     "department": "Commerce",
@@ -2007,6 +2131,10 @@
     "entity": "Sfeir-Luxembourg",
     "currentClient": "Sanofi",
     "workcity": "Luxembourg",
+    "workCoords": {
+      "lat":49.8154033,
+      "long":5.8524553
+    },
     "workAdress": "rue...",
     "manager": "Didier",
     "department": "Compta",
@@ -2071,6 +2199,10 @@
     "entity": "Sfeir-Paris",
     "currentClient": "Adeo",
     "workcity": "Strasbourg",
+    "workCoords": {
+      "lat":48.5692058,
+      "long":7.6918828
+    },
     "workAdress": "Boulevard..",
     "manager": "Christophe",
     "department": "Recrutement",
@@ -2135,6 +2267,10 @@
     "entity": "Sfeir-Est",
     "currentClient": "Generali",
     "workcity": "Strasbourg",
+    "workCoords": {
+      "lat":48.5692058,
+      "long":7.6918828
+    },
     "workAdress": "rue...",
     "manager": "Didier",
     "department": "Recrutement",
@@ -2199,6 +2335,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Sanofi",
     "workcity": "Luxembourg",
+    "workCoords": {
+      "lat":49.8154033,
+      "long":5.8524553
+    },
     "workAdress": "Place...",
     "manager": "Christophe",
     "department": "Recrutement",
@@ -2263,6 +2403,10 @@
     "entity": "Sfeir-Paris",
     "currentClient": "Generali",
     "workcity": "Lille",
+    "workCoords": {
+      "lat":50.6311167,
+      "long":3.0120553
+    },
     "workAdress": "Boulevard..",
     "manager": "Christophe",
     "department": "Commerce",
@@ -2327,6 +2471,10 @@
     "entity": "Sfeir-Paris",
     "currentClient": "Generali",
     "workcity": "Luxembourg",
+    "workCoords": {
+      "lat":49.8154033,
+      "long":5.8524553
+    },
     "workAdress": "rue...",
     "manager": "Aurélien",
     "department": "Commerce",
@@ -2391,6 +2539,10 @@
     "entity": "Sfeir-Paris",
     "currentClient": "Generali",
     "workcity": "Lille",
+    "workCoords": {
+      "lat":50.6311167,
+      "long":3.0120553
+    },
     "workAdress": "Boulevard..",
     "manager": "Aurélien",
     "department": "Compta",
@@ -2455,6 +2607,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Adeo",
     "workcity": "Lille",
+    "workCoords": {
+      "lat":50.6311167,
+      "long":3.0120553
+    },
     "workAdress": "Place...",
     "manager": "Didier",
     "department": "Commerce",
@@ -2519,6 +2675,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Generali",
     "workcity": "Luxembourg",
+    "workCoords": {
+      "lat":49.8154033,
+      "long":5.8524553
+    },
     "workAdress": "rue...",
     "manager": "Didier",
     "department": "DO",
@@ -2583,6 +2743,10 @@
     "entity": "Sfeir-Est",
     "currentClient": "Generali",
     "workcity": "Strasbourg",
+    "workCoords": {
+      "lat":48.5692058,
+      "long":7.6918828
+    },
     "workAdress": "Place...",
     "manager": "Didier",
     "department": "Compta",
@@ -2647,6 +2811,10 @@
     "entity": "Sfeir-Paris",
     "currentClient": "Adeo",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "Place...",
     "manager": "Bruno",
     "department": "Compta",
@@ -2711,6 +2879,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Generali",
     "workcity": "Strasbourg",
+    "workCoords": {
+      "lat":48.5692058,
+      "long":7.6918828
+    },
     "workAdress": "rue...",
     "manager": "Bruno",
     "department": "DO",
@@ -2775,6 +2947,10 @@
     "entity": "Sfeir-Est",
     "currentClient": "Adeo",
     "workcity": "Luxembourg",
+    "workCoords": {
+      "lat":49.8154033,
+      "long":5.8524553
+    },
     "workAdress": "Boulevard..",
     "manager": "Aurélien",
     "department": "Recrutement",
@@ -2839,6 +3015,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Generali",
     "workcity": "Lille",
+    "workCoords": {
+      "lat":50.6311167,
+      "long":3.0120553
+    },
     "workAdress": "Boulevard..",
     "manager": "Bruno",
     "department": "Commerce",
@@ -2903,6 +3083,10 @@
     "entity": "Sfeir-Luxembourg",
     "currentClient": "Adeo",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "Boulevard..",
     "manager": "Didier",
     "department": "DO",
@@ -2967,6 +3151,10 @@
     "entity": "Sfeir-Lille",
     "currentClient": "Generali",
     "workcity": "Luxembourg",
+    "workCoords": {
+      "lat":49.8154033,
+      "long":5.8524553
+    },
     "workAdress": "Boulevard..",
     "manager": "Christophe",
     "department": "Recrutement",
@@ -3031,6 +3219,10 @@
     "entity": "Sfeir-Luxembourg",
     "currentClient": "Sanofi",
     "workcity": "Paris",
+    "workCoords": {
+      "lat":48.8589506,
+      "long":2.2768487
+    },
     "workAdress": "Boulevard..",
     "manager": "Bruno",
     "department": "Recrutement",
