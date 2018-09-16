@@ -2,12 +2,16 @@ import { Component } from "../../utils/component/Component";
 import { PlainComponent } from "../../utils/component/PlainComponent";
 import { compileTemplate } from "../../utils/component/compileTemplate";
 import { activateLinks } from "../../utils/activateLinks";
-import { appRouter } from "../app-router";
 
 const capitalize = ([s, ...tring]) => [s.toUpperCase(), ...tring].join('');
 const mySplit = (string) => string ? string.split('@')[0] : '';
 
 export class PeopleCardComponent extends Component {
+
+  constructor(parent, appRouter){
+    super(parent);
+    this.appRouter = appRouter;
+  }
 
   init() {
     const container = document.createElement("div");
@@ -57,7 +61,7 @@ export class PeopleCardComponent extends Component {
       this.content.container.querySelector('[data-card-footer]').replaceWith(this.footer(params));
     }
 
-    activateLinks(this.container, appRouter);
+    activateLinks(this.container, this.appRouter);
   }
 
   title({ people, describe, }) {

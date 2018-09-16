@@ -3,12 +3,13 @@ import { PlainComponent } from "../../utils/component/PlainComponent";
 import { PeopleCardComponent } from "./PeopleCard";
 
 export class PeopleComponent extends RoutedComponent {
-  constructor(parent, { peoples }) {
+  constructor(parent, { peoples }, appRouter) {
     super(parent);
     this.peoplesService = peoples;
     this.filteredPeople = [];
     this.loading = true;
     this.query = "";
+    this.appRouter = appRouter;
   }
 
   async getPeoples() {
@@ -91,7 +92,7 @@ export class PeopleComponent extends RoutedComponent {
         peopleCardsWrapper.innerHTML = '';
         // TODO: optimization for re-rendering
         this.peopleCards = this.filteredPeople.map(people => ({
-          component: new PeopleCardComponent(peopleCardsWrapper),
+          component: new PeopleCardComponent(peopleCardsWrapper, this.appRouter),
           people
         }));
         this.peopleCards.forEach(({ component, people }) => {

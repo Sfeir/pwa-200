@@ -5,13 +5,14 @@ import "./Home.css";
 import { PeopleCardComponent } from "./PeopleCard";
 
 export class HomeComponent extends RoutedComponent {
-  constructor(parent, { peoples }) {
+  constructor(parent, { peoples }, appRouter) {
     super(parent);
     this.peoplesService = peoples;
     this.filteredPeople = [];
     this.loading = true;
     this.query = "";
     this.peoples = [];
+    this.appRouter = appRouter;
   }
 
   async getPeoples() {
@@ -54,7 +55,7 @@ export class HomeComponent extends RoutedComponent {
         </div>
       `);
       const randomPeopleWrapper = this.content.container.querySelector('[data-people-card]');
-      this.peopleCard = new PeopleCardComponent(randomPeopleWrapper);
+      this.peopleCard = new PeopleCardComponent(randomPeopleWrapper, this.appRouter);
       this.peopleCard.render({ people: this.random });
     }
   }
