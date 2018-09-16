@@ -74,3 +74,7 @@ nav.mdl-navigation a, nav.mdl-navigation a:visited{
 header.mdl-layout__header{
   background-color: #0268ab;
 }
+
+div.mdl-textfield_expandable-holder {
+  max-width: 100%;
+}
