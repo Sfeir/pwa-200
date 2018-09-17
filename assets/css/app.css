@@ -192,6 +192,11 @@ section > h1 {
  padding-top: 175px;
 }
 
+.mdl-card label.fullscreen-button {
+  position: absolute;
+  right: 0;
+}
+
 /*TOOLBAR MENU*/
 .toolbar-menu{
   height: 100%;
