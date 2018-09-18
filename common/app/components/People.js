@@ -119,6 +119,7 @@ export class PeopleComponent extends RoutedComponent {
         );
       }
 
+      componentHandler.upgradeDom();
     }
   }
 }
