@@ -16,6 +16,7 @@ var cacheAppShellStatic = [
   "/mdl/material.min.css",
   "/mdl/material.min.js",
   "/css/material-icons.css",
+  "/css/md-overwrite.css",
   "/css/font/MaterialIcons-Regular.woff2",
   "/offline.html"
 ];
