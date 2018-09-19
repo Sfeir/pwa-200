@@ -32,7 +32,8 @@
     "PWA, service worker, vanillajs, materials"
   ],
   "scripts": {
-    "start": "webpack-dev-server --step-$npm_config_step"
+    "start": "webpack-dev-server --step-$npm_config_step",
+    "dev": "webpack-dev-server"
   },
   "bugs": {
     "url": "https://github.com/Sfeir/pwa-200/issues"
