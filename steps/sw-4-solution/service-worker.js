@@ -15,11 +15,7 @@ self.addEventListener('activate', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-  const url = new URL(event.request.url);
-  const catImage = '/img/cat.jpg';
-
-  if (url.pathname.endsWith('jpg')) {
-    event.respondWith(fetch(catImage));
-    return false;
+  if (event.request.url.endsWith('jpg')) {
+    event.respondWith(fetch('/img/cat.jpg'));
   }
 });
