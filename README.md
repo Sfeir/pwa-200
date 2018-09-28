@@ -6,7 +6,6 @@ A experimentation of PWA's with Angular 1 and Materials
 
     # Install dependencies
     npm i
-    # Run in normal mode (without service worker)
-    gulp
-    # Run with service worker
-    gulp sw-ready
+    
+    # Run application
+    npm run start
