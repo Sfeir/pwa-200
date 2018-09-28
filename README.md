@@ -7,7 +7,7 @@ A Progressive Web App with AngularJS and Material design
 
 # Slides
 
-You can view the slides [here](https://docs.google.com/presentation/d/103fPXGcTSR0gw6FpCT0KpWyNOTAaTnSLRdE8SVXbDWI/edit?usp=sharing)
+You can view the slides [here](https://docs.google.com/presentation/d/1cXWl4ovxs8Skpvyn0yMimjIjKhnlAFLlxLZsPSHgin4/edit?usp=sharing)
 
 # Run project
 
