@@ -1,5 +1,5 @@
 {
-  "name": "peoples",
+  "name": "@sfeir/school-pwa200",
   "version": "1.0.0",
   "description": "Exercices and demos for the PWA SFEIR School",
   "contributors": [
@@ -42,6 +42,7 @@
   "dependencies": {
     "normalize.css": "8.0.0"
   },
+  "private": true,
   "devDependencies": {
     "babel-core": "~6.26.3",
     "babel-loader": "~7.1.4",
