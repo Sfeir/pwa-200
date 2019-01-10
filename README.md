@@ -1,23 +1,24 @@
-# Peoples PWA
+# PWA 200
 
-A Progressive Web App with AngularJS and Material design
+A [SFEIR School](https://www.sfeir.com/formation/school/)
 
-![image](https://cloud.githubusercontent.com/assets/1699357/15929461/6c7a2374-2e4d-11e6-8564-14f9e6cb97ab.png)
+![logo](https://www.sfeir.com/img/school/formations/Progressive%20Web%20Apps%20200.png)
 
+[Planning, trainers and other details](https://www.sfeir.com/formation/school/progressive-web-apps-200/)
 
 # Slides
 
-You can view the slides [here](https://docs.google.com/presentation/d/1cXWl4ovxs8Skpvyn0yMimjIjKhnlAFLlxLZsPSHgin4/edit?usp=sharing)
+You can view the slides [here](https://docs.google.com/presentation/d/1PwG8OTCYcIeCZ5768ihpY7vEladmkmEKRLNU37fNuHU/edit?usp=sharing).
 
 # Run project
 
     # Install dependencies
     `npm i`
-    
+
     # Run application
     `npm start`
 
-    # Run step 
+    # Run step
     `npm start --step=XXX `
 
 # Steps
@@ -26,6 +27,6 @@ Each exercice has two directories:
 - a clean directory to get you started (ex: step-3)
 - a solution directory (ex: step-3-solution)
 
-to go a step run the npm script with `--step=XX` : 
+to go a step run the npm script with `--step=XX` :
  * `npm start --step=3` for an exercice
  * `npm start --step=3-solution` for the solution
