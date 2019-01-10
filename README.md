@@ -12,15 +12,20 @@ You can view the slides [here](https://docs.google.com/presentation/d/1cXWl4ovxs
 # Run project
 
     # Install dependencies
-    npm i
+    `npm i`
     
     # Run application
-    npm run start
+    `npm start`
 
-# Branches
+    # Run step 
+    `npm start --step=XXX `
 
-Each exercice has two branches:
-- a clean branch to get you started (ex: step-3)
-- a solution branch (ex: step-3-solution)
+# Steps
 
-See all branches [here](https://github.com/Sfeir/pwa-200/branches/all)
+Each exercice has two directories:
+- a clean directory to get you started (ex: step-3)
+- a solution directory (ex: step-3-solution)
+
+to go a step run the npm script with `--step=XX` : 
+ * `npm start --step=3` for an exercice
+ * `npm start --step=3-solution` for the solution
