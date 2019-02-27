@@ -1,3 +1,8 @@
+# DEPRECATED!!!
+
+The repository for this school is now depecrated, please follow the new repository : https://github.com/sfeir-open-source/sfeir-school-pwa
+
+
 # PWA 200
 
 A [SFEIR School](https://www.sfeir.com/formation/school/)
